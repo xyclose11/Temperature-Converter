@@ -1,8 +1,32 @@
+/*
+    Harris Gustafson
+    TempConverter.java
+    10/17/2023
+    Simple Java temperature converter. Can convert to and from the following:
+    - Celcius
+    - Farenheight
+    - Kelvin
+
+ */
+
 package tempconverter;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+//TODO:
+/*
+    - Limit Testing
+    - Modern UI
+    - Progress Bar
+    - Input Validation
+    - See if Enums are applicable and better here
+    - Add more features?
+
+
+
+ */
 
 public class TempGUI {
     private JPanel TempCGUI;
@@ -18,6 +42,7 @@ public class TempGUI {
     private JRadioButton toCelcius;
     private JRadioButton toFarenheight;
     private JRadioButton toKelvin;
+    private JLabel userInputLabel;
     private JLabel fLabel;
     private Double userInput;
     private final Double kelvinValue = 273.15;
@@ -31,6 +56,7 @@ public class TempGUI {
 
         fromCelcius.setSelected(true);
         toCelcius.setSelected(true);
+
 
     }
 
@@ -62,7 +88,7 @@ public class TempGUI {
         public void actionPerformed(ActionEvent e) {
 
             try {
-                Integer.parseInt(inputTxt.getText());
+                Double.parseDouble(inputTxt.getText());
                 if (fromCelcius.isSelected() == true) {
                     if (toKelvin.isSelected() == true) {
                         resultsTxt.setText("" + (userInputFunction()+ kelvinValue));
@@ -115,5 +141,6 @@ public class TempGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
     }
 }

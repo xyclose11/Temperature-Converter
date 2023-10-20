@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="tempconverter.TempGUI">
-  <grid id="27dc6" binding="TempCGUI" layout-manager="GridLayoutManager" row-count="5" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="TempCGUI" layout-manager="GridLayoutManager" row-count="4" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
       <xy x="20" y="20" width="731" height="400"/>
     </constraints>
     <properties>
+      <alignmentX value="0.5"/>
       <background color="-1381697"/>
-      <preferredSize width="600" height="400"/>
+      <enabled value="true"/>
+      <maximumSize width="2000" height="2000"/>
+      <minimumSize width="400" height="200"/>
+      <opaque value="true"/>
+      <preferredSize width="600" height="600"/>
     </properties>
-    <border type="line">
-      <color color="-6513518"/>
+    <border type="line" title="Temperature Converter" title-justification="2" title-position="2">
+      <font name="DialogInput" size="16" style="1"/>
+      <title-color color="-16777216"/>
+      <color color="-131073"/>
     </border>
     <children>
       <component id="25283" class="javax.swing.JTextField" binding="inputTxt">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="7" vsize-policy="0" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
           <caretColor color="-4835034"/>
+          <columns value="0"/>
           <disabledTextColor color="-6815849"/>
           <font name="JetBrains Mono"/>
           <foreground color="-16777216"/>
-        </properties>
-      </component>
-      <component id="82d35" class="javax.swing.JButton" binding="Submit">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-196614"/>
-          <text value="Submit"/>
+          <horizontalAlignment value="10"/>
+          <text value=""/>
+          <toolTipText value=""/>
         </properties>
       </component>
       <component id="e2fc1" class="javax.swing.JTextField" binding="resultsTxt">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="3" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <columns value="2"/>
+          <focusCycleRoot value="false"/>
+          <font name="Fira Code" size="18" style="0"/>
+          <horizontalAlignment value="0"/>
+        </properties>
       </component>
       <component id="d976c" class="javax.swing.JLabel" binding="InputType">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <alignmentY value="0.0"/>
+          <focusable value="false"/>
+          <font name="Malgun Gothic" size="18" style="0"/>
           <text value="Input Type:"/>
         </properties>
       </component>
       <component id="47167" class="javax.swing.JRadioButton" binding="fromCelcius">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
@@ -62,7 +72,7 @@
       </component>
       <component id="a501a" class="javax.swing.JRadioButton" binding="fromFarenheight">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
@@ -71,32 +81,27 @@
       </component>
       <component id="a98ff" class="javax.swing.JRadioButton" binding="fromKelvin">
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
           <text value="Kelvin"/>
         </properties>
       </component>
-      <component id="715be" class="javax.swing.JButton" binding="Clear">
-        <constraints>
-          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Clear"/>
-        </properties>
-      </component>
       <component id="8d905" class="javax.swing.JLabel" binding="OutputType">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <alignmentY value="0.0"/>
+          <focusable value="false"/>
+          <font name="Malgun Gothic" size="18" style="0"/>
           <text value="Output Type:"/>
         </properties>
       </component>
       <component id="2eb89" class="javax.swing.JRadioButton" binding="toCelcius">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
@@ -105,7 +110,7 @@
       </component>
       <component id="7b2af" class="javax.swing.JRadioButton" binding="toFarenheight">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
@@ -114,13 +119,61 @@
       </component>
       <component id="6d551" class="javax.swing.JRadioButton" binding="toKelvin">
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1381697"/>
           <text value="Kelvin"/>
         </properties>
       </component>
+      <component id="d2eb5" class="javax.swing.JLabel" binding="userInputLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <focusable value="false"/>
+          <font name="Malgun Gothic" size="18" style="0"/>
+          <text value="Input: "/>
+        </properties>
+      </component>
+      <splitpane id="b6d98">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1381697"/>
+          <continuousLayout value="false"/>
+          <dividerLocation value="30"/>
+          <dividerSize value="1"/>
+          <orientation value="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="82d35" class="javax.swing.JButton" binding="Submit">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties>
+              <background color="-196614"/>
+              <text value="Submit"/>
+            </properties>
+            <clientProperties>
+              <hideActionText class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+          </component>
+          <component id="715be" class="javax.swing.JButton" binding="Clear">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <text value="Clear"/>
+            </properties>
+          </component>
+        </children>
+      </splitpane>
     </children>
   </grid>
   <buttonGroups>
