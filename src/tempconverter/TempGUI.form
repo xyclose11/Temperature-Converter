@@ -14,7 +14,7 @@
       <opaque value="true"/>
       <preferredSize width="600" height="600"/>
     </properties>
-    <border type="line" title="Temperature Converter" title-justification="2" title-position="2">
+    <border type="empty" title="Temperature Converter" title-justification="2" title-position="2">
       <font name="DialogInput" size="16" style="1"/>
       <title-color color="-16777216"/>
       <color color="-131073"/>
@@ -35,19 +35,6 @@
           <horizontalAlignment value="10"/>
           <text value=""/>
           <toolTipText value=""/>
-        </properties>
-      </component>
-      <component id="e2fc1" class="javax.swing.JTextField" binding="resultsTxt">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <columns value="2"/>
-          <focusCycleRoot value="false"/>
-          <font name="Fira Code" size="18" style="0"/>
-          <horizontalAlignment value="0"/>
         </properties>
       </component>
       <component id="d976c" class="javax.swing.JLabel" binding="InputType">
@@ -174,6 +161,15 @@
           </component>
         </children>
       </splitpane>
+      <component id="35f72" class="javax.swing.JLabel" binding="resultsLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Consolas" size="36" style="1"/>
+          <text value="Label"/>
+        </properties>
+      </component>
     </children>
   </grid>
   <buttonGroups>

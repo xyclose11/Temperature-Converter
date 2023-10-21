@@ -44,6 +44,7 @@ public class TempGUI {
     private JRadioButton toKelvin;
     private JLabel userInputLabel;
     private JLabel fLabel;
+    private JLabel resultsLabel;
     private Double userInput;
     private final Double kelvinValue = 273.15;
 
@@ -62,17 +63,12 @@ public class TempGUI {
 
 
 
-    private class rdBtnClicked implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            resultsTxt.setText("Test");
-        }
-    }
+
 
     private class clrBtn implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e){
-            resultsTxt.setText("");
+            resultsLabel.setText("");
         }
     }
 
@@ -91,36 +87,36 @@ public class TempGUI {
                 Double.parseDouble(inputTxt.getText());
                 if (fromCelcius.isSelected() == true) {
                     if (toKelvin.isSelected() == true) {
-                        resultsTxt.setText("" + (userInputFunction()+ kelvinValue));
+                        resultsLabel.setText("" + (userInputFunction()+ kelvinValue) + " K");
                     } else if (toFarenheight.isSelected() ==  true) {
-                        resultsTxt.setText("" + (userInputFunction() * 1.8 + 32) );
+                        resultsLabel.setText("" + (userInputFunction() * 1.8 + 32) + " F");
                     } else {
-                        resultsTxt.setText("" + (userInputFunction()));
+                        resultsLabel.setText("" + (userInputFunction()) + " C");
                     }
 
                 } else if (fromFarenheight.isSelected() == true) {
                     if (toKelvin.isSelected() == true) {
-                        resultsTxt.setText("" + ((userInputFunction() - 32) / 1.8 + kelvinValue));
+                        resultsLabel.setText("" + ((userInputFunction() - 32) / 1.8 + kelvinValue) + " K");
                     } else if (toCelcius.isSelected()) {
-                        resultsTxt.setText("" + (userInputFunction() - 32) / 1.8);
+                        resultsLabel.setText("" + (userInputFunction() - 32) / 1.8 + " C");
                     } else {
-                        resultsTxt.setText("" + (userInputFunction()));
+                        resultsLabel.setText("" + (userInputFunction()) + " F");
                     }
 
                 } else if (fromKelvin.isSelected() == true) {
                     if (toCelcius.isSelected() == true) {
-                        resultsTxt.setText("" + (userInputFunction() - kelvinValue));
+                        resultsLabel.setText("" + (userInputFunction() - kelvinValue) + " C");
                     } else if (toFarenheight.isSelected() == true) {
-                        resultsTxt.setText("" + (userInputFunction() - kelvinValue) * 1.8 + 32);
+                        resultsLabel.setText("" + (userInputFunction() - kelvinValue) * 1.8 + 32 + " F");
                     } else {
-                        resultsTxt.setText("" + (userInputFunction()));
+                        resultsLabel.setText("" + (userInputFunction()) + " K");
                     }
 
                 }
             }
 
             catch (NumberFormatException r) {
-                resultsTxt.setText("INPUT MUST BE A NUMBER");
+                resultsLabel.setText("INPUT MUST BE A NUMBER");
             }
 
 
